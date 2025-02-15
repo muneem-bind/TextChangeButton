@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text change after click</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(43, 156, 226);
+            width: 100%;
+            height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+        button{
+            height: 32px;
+            width: 102px;
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 1ms;
+        }
+        button:hover{
+            background-color: rgb(6, 1, 77);
+        }
+        #heading{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello Everyone Click here !</h1>
+    <button onclick="clickMe()">Click Me</button>
+
+    <script>
+        function clickMe(){
+        const heading = document.getElementById("heading");
+        heading.innerHTML="Welcome Back!";
+        }
+    </script>
+</body>
+</html>
